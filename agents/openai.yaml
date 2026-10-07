@@ -1,0 +1,4 @@
+interface:
+  display_name: "PRD Screen Fidelity · 예시화면 그대로 구현"
+  short_description: "기획서 예시화면을 디자인 기준으로 구현하고 실제 화면과 비교"
+  default_prompt: "$prd-screen-fidelity로 기획서의 예시화면과 기능을 함께 구현해줘. 임의로 UI를 재디자인하지 말고 실제 실행 화면을 시안과 비교해 차이를 수정해줘."
