@@ -7,6 +7,10 @@ description: Implement app/web screens faithfully from PRD example screens, desi
 
 Treat the user's supplied example screens as the visual specification for the requested implementation, not optional inspiration. Deliver working features in that visual structure. Do not claim pixel-perfect reproduction unless the relevant screens have been rendered and compared at controlled dimensions.
 
+## Host portability
+
+These instructions are model/provider-neutral. Resolve supporting links relative to this installed skill directory. Use the current host's available file, image, browser, device and shell tools; do not assume Codex-specific tool names or agents/openai.yaml support. `$skill-name` denotes Codex invocation; Claude Code uses `/skill-name`, and Gemini CLI can activate a discovered skill by name. Missing tools limit verification, not the requirement to report evidence honestly.
+
 ## Establish what is authoritative
 
 - Follow explicit current user instructions first. Use the latest designated design for appearance and the approved requirements for behavior. Preserve relevant project instructions and the existing stack. This skill does not require subagents or a particular framework.

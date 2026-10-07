@@ -18,6 +18,53 @@
 
 더미 앱에서 버튼을 누르면 메시지만 나오도록 명시한 경우 그 요구를 따릅니다. 실제 저장이 필요한 제품에서 단순 메시지로 기능을 대신하는 것은 허용하지 않습니다.
 
+## Claude Code·Gemini CLI에서도 사용하기
+
+핵심은 공통 `SKILL.md`와 상대경로 참조 문서입니다. `agents/openai.yaml`은 Codex 표시용 부가 정보이며 다른 도구에서 실행하는 데 필요하지 않습니다.
+
+| 도구 | 개인 설치 위치 | 호출 |
+|---|---|---|
+| Codex | 아래 설명의 현재 인식 경로 | `$prd-screen-fidelity` |
+| Claude Code | `~/.claude/skills/prd-screen-fidelity` | `/prd-screen-fidelity` |
+| Gemini CLI | `~/.gemini/skills/prd-screen-fidelity` | “prd-screen-fidelity 스킬을 활성화해서 작업해줘” |
+
+Claude Code 설치:
+
+```sh
+git clone https://github.com/Ddrubok/prd-screen-fidelity.git ~/.claude/skills/prd-screen-fidelity
+```
+
+Gemini CLI 설치:
+
+```sh
+gemini skills install https://github.com/Ddrubok/prd-screen-fidelity --scope user
+gemini skills list
+```
+
+프로젝트 전용이면 Claude는 `.claude/skills/prd-screen-fidelity`, Gemini는 `--scope workspace`를 사용합니다. 설치·활성화 동의가 표시될 수 있습니다. 이후의 `# PRD Screen Fidelity
+
+[English](README.md) | [한국어](README.ko.md)
+
+**기획서의 기능뿐 아니라 예시화면의 디자인도 그대로 구현하도록 돕는 AI 에이전트 스킬입니다.**
+
+사용자가 와이어프레임·참고 이미지·변경 대상이라고 명시하지 않았다면, 예시화면을 실제 디자인 기준으로 취급합니다. 원본 이미지를 직접 확인하고, 화면 요소와 기능을 연결하고, 구현 후 실제 실행 화면과 비교합니다.
+
+이 저장소는 에이전트용 지침입니다. 이미지 한 장으로 앱을 자동 생성하는 프로그램이나 완벽한 픽셀 일치를 보장하는 도구는 아닙니다.
+
+## 작업 방식
+
+1. 원본 화면·페이지·버전·크기·표시 상태를 확인합니다.
+2. 배치·글꼴·색상·간격·에셋과 기능을 화면 계약으로 정리합니다.
+3. 기존 기술 환경에서 구현하고 임의의 템플릿 UI로 바꾸지 않습니다.
+4. 같은 크기·상태의 실제 화면을 캡처하고 나란히 또는 겹쳐 비교합니다.
+5. 차이를 수정하고 남은 오차·대체 에셋·미검증 범위를 보고합니다.
+
+더미 앱에서 버튼을 누르면 메시지만 나오도록 명시한 경우 그 요구를 따릅니다. 실제 저장이 필요한 제품에서 단순 메시지로 기능을 대신하는 것은 허용하지 않습니다.
+
+ 호출 예시는 Codex용이며 다른 도구에서는 위 호출 방식으로 바꾸세요.
+
+확인 범위는 **CLI 환경**입니다. 일반 웹 채팅, Claude 웹 업로드, Antigravity/agy의 자동 로딩까지 검증한 것은 아닙니다. [호환성 확인 기록](COMPATIBILITY.md)을 참고하세요.
+
 ## 설치
 
 에이전트가 인식하는 스킬 위치 한 곳에 설치하세요.
