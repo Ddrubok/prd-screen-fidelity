@@ -1,14 +1,25 @@
 # Compatibility evidence
 
-Checked on 2026-10-07.
+Historical host checks on 2026-10-07. This record concerns `prd-screen-fidelity`; the original discovery exercise also included `app-qa-human`. It was not a separate single-skill activation benchmark. The dates and versions below have not been refreshed by the documentation update.
 
 | Host | Evidence | Limit |
 |---|---|---|
-| Codex | Installed skills discovered in the maintainer session; structural validator passed | No guarantee for every host version |
+| Codex | prd-screen-fidelity was among the installed skills discovered in the maintainer session; structural validator passed | Discovery/structure do not establish every execution stage or support for every host version |
 | Claude Code 2.1.107 | Local CLI version/help checked; frontmatter, relative references, installation and slash invocation reviewed against official documentation | No authenticated skill activation or task run performed |
-| Gemini CLI 0.59.0 | Both skills copied to a test workspace's .gemini/skills and listed as Enabled by gemini skills list | Discovery only; no model inference, activation or task-quality test |
+| Gemini CLI 0.59.0 | prd-screen-fidelity was copied with app-qa-human into a test workspace's .gemini/skills and listed as Enabled by gemini skills list | Discovery only; no model inference, activation or task-quality test |
 
-Gemini's existing Unity MCP endpoint was offline during discovery. This was unrelated to these instruction-only skills and did not prevent their discovery. Neither skill requires Unity MCP, a particular model/provider, paid API credentials, or an orchestration runner. Available browser/device/image/workbook tools determine actual coverage.
+Gemini's existing Unity MCP endpoint was offline during that discovery exercise. It did not prevent prd-screen-fidelity from being listed. This skill does not require Unity MCP, a particular model/provider, paid API credentials, or an orchestration runner. Available development, browser/device and image tools determine actual coverage.
+
+## What each stage establishes
+
+| Stage | Evidence in the historical host checks |
+|---|---|
+| Installation / discovery | Codex discovery and Gemini test-workspace listing above; Claude installation/invocation instructions were reviewed, not authenticated activation |
+| Activation | No dedicated per-host activation result recorded; Gemini's Enabled listing is not model activation |
+| Reference document / image access | Relative references were reviewed; no per-host runtime document/image-access trial recorded |
+| Actual implementation / comparison | No such trial in the host compatibility exercise. The separate same-author Flutter Web demonstration described in the README is not an independent cross-host test, and its artifacts are not bundled |
+
+Later maintainer fixture runs, if recorded in [evaluation](references/evaluation.md), retain their own dates, environment and limits. They do not retroactively upgrade these historical host checks.
 
 ## Host-neutral execution
 

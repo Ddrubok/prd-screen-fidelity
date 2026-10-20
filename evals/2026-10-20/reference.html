@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>Reference — profile settings</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:16px Arial,sans-serif;color:#17232c;background:#f4f6f5}
+.shell{display:grid;grid-template-columns:208px 1fr;min-height:100vh}nav{padding:32px 24px;background:#e5ece8;border-right:1px solid #c6d1cb}
+nav strong{display:block;margin-bottom:32px;font-size:20px}nav button{display:block;width:160px;padding:12px;text-align:left;border:0;border-radius:4px;font:inherit;background:transparent;color:inherit}
+nav .active{background:#c8dacf;font-weight:700}nav button:disabled{color:#55685c}
+main{padding:48px}h1{margin:0 0 12px;font-size:30px;line-height:36px}p{margin:0 0 32px;line-height:24px;color:#526159}
+form{width:400px}label{display:block;font-weight:700;margin-bottom:10px}input{width:100%;height:44px;padding:10px 12px;border:1px solid #81978a;border-radius:4px;font:inherit;background:white;color:inherit}
+.save{margin-top:24px;padding:12px 24px;background:#245b41;color:white;border:0;border-radius:4px;font:inherit;font-weight:700}output{display:block;min-height:24px;margin-top:16px;color:#245b41}
+button:focus-visible,input:focus-visible{outline:3px solid #b36b00;outline-offset:3px}
+</style>
+<div class="shell"><nav aria-label="Settings"><strong>Field Notes</strong><button class="active" aria-current="page">Profile</button><button disabled>Notifications</button></nav>
+<main><h1>Profile settings</h1><p>Choose the name shown on this device.</p><form><label for="name">Display name</label><input id="name" value="Player One"><button class="save" type="button">Save changes</button><output aria-live="polite"></output></form></main></div></html>

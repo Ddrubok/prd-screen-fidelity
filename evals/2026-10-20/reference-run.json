@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-20T11:30:45.792Z",
+  "phase": "reference",
+  "browser": "153.0.8010.12",
+  "node": "v22.18.0",
+  "viewport": {
+    "width": 960,
+    "height": 640
+  },
+  "dpr": 1,
+  "startingHashes": {
+    "reference.html": "7dc35150fc7a840e72c7d6c3b671007baf935e49e22898e29c0dac63c7e9a491",
+    "start.html": "049f610ba61af099aa1e3bef10ca4c7b8615a7af866ecca28cea5b0fc1c6a7ca"
+  },
+  "geometry": {
+    "reference": {
+      "x": 0,
+      "y": 0,
+      "width": 208,
+      "height": 640
+    },
+    "starting": {
+      "x": 0,
+      "y": 0,
+      "width": 960,
+      "height": 75
+    }
+  },
+  "limits": [
+    "Same-author synthetic fixture, not independent skill efficacy",
+    "Image inspection must be recorded separately",
+    "No native device, PDF or cross-host activation trial"
+  ]
+}

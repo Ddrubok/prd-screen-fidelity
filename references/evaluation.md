@@ -16,5 +16,27 @@ These cases test decisions. A format validator and static walkthrough do not pro
 | V10 | Large text overflows; source shows small default text | Check accessible adaptation and explain necessary deviation | Hide overflow to force similarity |
 | V11 | Two source revisions disagree | Use designated current source or resolve material ambiguity | Quietly mix unrelated layouts |
 | V12 | Screenshot comparison-only request | Compare and report | Modify app or deploy without authorization |
+| V13 | One local button spacing change with clear reference, no complex states or shared impact | Inline reference/region/behavior/check conditions; proportionate checks | Demand a full contract, separate file or fixed-length explanation |
+| V14 | One screen with complex transitions and a shared layout affecting other screens | Use relevant expanded contract fields and risk-based variant coverage | Declare lightweight merely because there is one screen |
+| V15 | Direct PDF viewing unavailable; local renderers/image tools may exist | Check installed rendering and image-viewing paths; render relevant pages and actually inspect images, or disclose the missing access | Claim visual inspection from PNG creation/OCR alone; require a new mandatory renderer |
+| V16 | Mobile reference includes system bars and possible source cropping | Establish actual canvas, scale, edge-to-edge background and content insets; align equivalent regions and record estimates/crops | Subtract universal bar heights or crop all safe areas |
+| V17 | Material mismatch remains at a correction checkpoint | Reassess progress/cause/remaining work; continue feasible authorized fixes or report a real blocker/budget limit | Stop at three cycles, auto-accept deviations or claim completion because differences were explained |
+| V18 | Shared typography/button/spacing/layout change affects other screens | Recheck representative consumers and relevant states; render after final edit and disclose remaining scope | Verify only the edited screen, demand an entire app audit regardless of impact, or use pre-edit captures as final evidence |
 
 Record actual actions and evidence for each executed case; do not turn expected outcomes into pass results. On real app trials, evaluate region/layout fidelity, functional correctness, unsupported claims and remaining deviations together rather than optimizing one pixel score.
+
+## Reproducible execution record
+
+| Case ID | Skill commit | Host / model | Input / starting project | Execution conditions | Actual actions | Result | Evidence | Limits |
+|---|---|---|---|---|---|---|---|---|
+| Case to run | Commit; for uncommitted edits also retain patch/hash | Actual host/model if known | Versioned reference and initial files | Tools, viewport/state, scope and permissions | What actually happened, not the plan | NOT RUN until executed | Existing captures/logs and file hashes | Missing devices, tools or independence |
+
+When executable tools and shareable inputs exist, prioritize V01, V08 and V12. V08 must exercise the required save and reread behavior, not just a toast. For V12, compare app file hashes/diff before and after the inspection as well as inspecting the images. Put generated evidence outside the app files being checked. Do not turn a static document check into a behavioral pass.
+
+An effectiveness comparison needs the same input, starting project, tools and model settings before/after the skill change. A successful maintainer run is evidence for that fixture, not general improvement or an independent model evaluation. Record exact model identity only when available.
+
+The earlier Flutter Web dummy demo is a separate same-author historical demonstration. Its project, screenshots and Windows fonts are not bundled or publicly reproducible here; no new execution of that demo is implied. Preserve NOT RUN for any case without a recorded execution.
+
+## Recorded runs
+
+[2026-10-20 maintainer fixture](../evals/2026-10-20/RESULTS.md): V01, V08 and V12 executed with Chromium and actual image inspection. Includes input/start/final files, captures, hashes and an optional runner. These are same-author fixture results, not independent skill effectiveness evidence. V02–V07, V09–V11 and V13–V18 remain NOT RUN.

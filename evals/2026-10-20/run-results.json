@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-20T11:31:17.374Z",
+  "phase": "check",
+  "browser": "153.0.8010.12",
+  "node": "v22.18.0",
+  "viewport": {
+    "width": 960,
+    "height": 640
+  },
+  "dpr": 1,
+  "startingHashes": {
+    "reference.html": "7dc35150fc7a840e72c7d6c3b671007baf935e49e22898e29c0dac63c7e9a491",
+    "start.html": "049f610ba61af099aa1e3bef10ca4c7b8615a7af866ecca28cea5b0fc1c6a7ca",
+    "app.html": "d91fd9320f3961bcbca41dc51fab26fadc8b0fe26aef18870cb4b8b025cd0473"
+  },
+  "geometry": {
+    "reference": {
+      "x": 0,
+      "y": 0,
+      "width": 208,
+      "height": 640
+    },
+    "starting": {
+      "x": 0,
+      "y": 0,
+      "width": 960,
+      "height": 75
+    },
+    "final": {
+      "x": 0,
+      "y": 0,
+      "width": 208,
+      "height": 640
+    }
+  },
+  "limits": [
+    "Same-author synthetic fixture, not independent skill efficacy",
+    "Image inspection must be recorded separately",
+    "No native device, PDF or cross-host activation trial"
+  ],
+  "endingHashes": {
+    "reference.html": "7dc35150fc7a840e72c7d6c3b671007baf935e49e22898e29c0dac63c7e9a491",
+    "start.html": "049f610ba61af099aa1e3bef10ca4c7b8615a7af866ecca28cea5b0fc1c6a7ca",
+    "app.html": "d91fd9320f3961bcbca41dc51fab26fadc8b0fe26aef18870cb4b8b025cd0473"
+  },
+  "checks": {
+    "V01": "Navigation bounds match; image review still required",
+    "V08": "Saved value restored after reload and new page",
+    "V12": "Read-only comparison capture; all fixture HTML hashes unchanged"
+  },
+  "skillHashes": {
+    "SKILL.md": "6b0ad0bd1cf73b016d0460cfe1d2aad1c24676c6bc065634fa6945dae9e6c3b4",
+    "references/contract-and-comparison.md": "08a0aa15c236c66597d7724a4c37923b89682f5bb321dfb1326b4f521d9c2022"
+  }
+}
