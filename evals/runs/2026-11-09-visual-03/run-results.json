@@ -1,0 +1,438 @@
+{
+  "date": "2026-11-09T06:54:48.020Z",
+  "browser": "153.0.8010.12",
+  "node": "v22.18.0",
+  "checks": {
+    "dense-desktop": {
+      "geometry": "PASS: title/input/button/main bounds",
+      "persistence": "PASS: save and reload"
+    },
+    "V15": {
+      "status": "PENDING rasterization and actual image inspection",
+      "pdf": "fixtures/dense-desktop/reference.pdf"
+    },
+    "mobile-language": {
+      "geometry": "PASS: title/input/button/main bounds",
+      "persistence": "PASS: save and reload"
+    },
+    "V04": {
+      "status": "PASS mechanical",
+      "css": [
+        390,
+        844
+      ],
+      "raster": [
+        1170,
+        2532
+      ],
+      "dpr": 3
+    },
+    "V16": {
+      "status": "PASS synthetic geometry",
+      "crop_css": {
+        "x": 0,
+        "y": 44,
+        "width": 390,
+        "height": 766
+      },
+      "top": 44,
+      "bottom": 34,
+      "physical_device": false
+    },
+    "V10": {
+      "status": "PASS mechanical",
+      "text_scale": 2,
+      "overflow": false,
+      "overlap": false,
+      "scrolled_button": {
+        "x": 20,
+        "y": 734.875,
+        "width": 350,
+        "height": 75.1875
+      }
+    },
+    "shared-style": {
+      "geometry": "PASS: title/input/button/main bounds",
+      "persistence": "PASS: save and reload"
+    },
+    "V18": {
+      "status": "PASS mechanical",
+      "consumers": [
+        "profile",
+        "notifications"
+      ],
+      "post_edit_captures": true,
+      "persistence": true
+    },
+    "legacy": {
+      "V01": "PASS geometry",
+      "V08": "PASS persistence",
+      "V12": "PASS unchanged HTML; comparison had no writes",
+      "geometry": {
+        "reference": {
+          "nav": {
+            "x": 0,
+            "y": 0,
+            "width": 208,
+            "height": 640
+          },
+          "h1": {
+            "x": 256,
+            "y": 48,
+            "width": 656,
+            "height": 36
+          },
+          "input": {
+            "x": 256,
+            "y": 180,
+            "width": 400,
+            "height": 44
+          },
+          ".save": {
+            "x": 256,
+            "y": 248,
+            "width": 154.734375,
+            "height": 42
+          },
+          "main": {
+            "x": 208,
+            "y": 0,
+            "width": 752,
+            "height": 640
+          }
+        },
+        "start": {
+          "nav": {
+            "x": 0,
+            "y": 0,
+            "width": 960,
+            "height": 75
+          },
+          "h1": {
+            "x": 48,
+            "y": 123,
+            "width": 864,
+            "height": 36
+          },
+          "input": {
+            "x": 48,
+            "y": 255,
+            "width": 400,
+            "height": 44
+          },
+          ".save": {
+            "x": 48,
+            "y": 323,
+            "width": 154.734375,
+            "height": 42
+          },
+          "main": {
+            "x": 0,
+            "y": 75,
+            "width": 960,
+            "height": 378
+          }
+        },
+        "app": {
+          "nav": {
+            "x": 0,
+            "y": 0,
+            "width": 208,
+            "height": 640
+          },
+          "h1": {
+            "x": 256,
+            "y": 48,
+            "width": 656,
+            "height": 36
+          },
+          "input": {
+            "x": 256,
+            "y": 180,
+            "width": 400,
+            "height": 44
+          },
+          ".save": {
+            "x": 256,
+            "y": 248,
+            "width": 154.734375,
+            "height": 42
+          },
+          "main": {
+            "x": 208,
+            "y": 0,
+            "width": 752,
+            "height": 640
+          }
+        }
+      }
+    },
+    "V13": "NOT RUN: no model overhead measurement",
+    "independent_efficacy": "NOT RUN: project solo-agent preference; no 18-session experiment"
+  },
+  "geometry": {
+    "dense-desktop": {
+      "reference": {
+        "h1": {
+          "x": 218,
+          "y": 28,
+          "width": 854,
+          "height": 32
+        },
+        "input": {
+          "x": 218,
+          "y": 142,
+          "width": 280,
+          "height": 40
+        },
+        "button": {
+          "x": 510,
+          "y": 140,
+          "width": 114.71875,
+          "height": 44
+        },
+        "main": {
+          "x": 190,
+          "y": 0,
+          "width": 910,
+          "height": 720
+        }
+      },
+      "start": {
+        "h1": {
+          "x": 12,
+          "y": 84,
+          "width": 1076,
+          "height": 32
+        },
+        "input": {
+          "x": 12,
+          "y": 198,
+          "width": 280,
+          "height": 40
+        },
+        "button": {
+          "x": 304,
+          "y": 196,
+          "width": 114.71875,
+          "height": 44
+        },
+        "main": {
+          "x": 0,
+          "y": 72,
+          "width": 1100,
+          "height": 613
+        }
+      },
+      "final": {
+        "h1": {
+          "x": 218,
+          "y": 28,
+          "width": 854,
+          "height": 32
+        },
+        "input": {
+          "x": 218,
+          "y": 142,
+          "width": 280,
+          "height": 40
+        },
+        "button": {
+          "x": 510,
+          "y": 140,
+          "width": 114.71875,
+          "height": 44
+        },
+        "main": {
+          "x": 190,
+          "y": 0,
+          "width": 910,
+          "height": 720
+        }
+      }
+    },
+    "mobile-language": {
+      "reference": {
+        "h1": {
+          "x": 20,
+          "y": 68,
+          "width": 350,
+          "height": 34
+        },
+        "input": {
+          "x": 20,
+          "y": 289.96875,
+          "width": 350,
+          "height": 47.59375
+        },
+        "button": {
+          "x": 20,
+          "y": 357.5625,
+          "width": 350,
+          "height": 49.59375
+        },
+        "main": {
+          "x": 0,
+          "y": 44,
+          "width": 390,
+          "height": 766
+        }
+      },
+      "start": {
+        "h1": {
+          "x": 12,
+          "y": 56,
+          "width": 1146,
+          "height": 34
+        },
+        "input": {
+          "x": 12,
+          "y": 226.78125,
+          "width": 500,
+          "height": 47.59375
+        },
+        "button": {
+          "x": 12,
+          "y": 294.375,
+          "width": 1146,
+          "height": 49.59375
+        },
+        "main": {
+          "x": 0,
+          "y": 44,
+          "width": 1170,
+          "height": 766
+        }
+      },
+      "final": {
+        "h1": {
+          "x": 20,
+          "y": 68,
+          "width": 350,
+          "height": 34
+        },
+        "input": {
+          "x": 20,
+          "y": 289.96875,
+          "width": 350,
+          "height": 47.59375
+        },
+        "button": {
+          "x": 20,
+          "y": 357.5625,
+          "width": 350,
+          "height": 49.59375
+        },
+        "main": {
+          "x": 0,
+          "y": 44,
+          "width": 390,
+          "height": 766
+        }
+      }
+    },
+    "shared-style": {
+      "reference": {
+        "h1": {
+          "x": 32,
+          "y": 96,
+          "width": 636,
+          "height": 32
+        },
+        "input": {
+          "x": 32,
+          "y": 215.59375,
+          "width": 636,
+          "height": 40
+        },
+        "button": {
+          "x": 32,
+          "y": 279.59375,
+          "width": 160,
+          "height": 46
+        },
+        "main": {
+          "x": 0,
+          "y": 64,
+          "width": 700,
+          "height": 349.59375
+        }
+      },
+      "start": {
+        "h1": {
+          "x": 32,
+          "y": 96,
+          "width": 636,
+          "height": 32
+        },
+        "input": {
+          "x": 32,
+          "y": 215.59375,
+          "width": 636,
+          "height": 30
+        },
+        "button": {
+          "x": 32,
+          "y": 269.59375,
+          "width": 160,
+          "height": 26
+        },
+        "main": {
+          "x": 0,
+          "y": 64,
+          "width": 700,
+          "height": 319.59375
+        }
+      },
+      "final": {
+        "h1": {
+          "x": 32,
+          "y": 96,
+          "width": 636,
+          "height": 32
+        },
+        "input": {
+          "x": 32,
+          "y": 215.59375,
+          "width": 636,
+          "height": 40
+        },
+        "button": {
+          "x": 32,
+          "y": 279.59375,
+          "width": 160,
+          "height": 46
+        },
+        "main": {
+          "x": 0,
+          "y": 64,
+          "width": 700,
+          "height": 349.59375
+        }
+      }
+    }
+  },
+  "files": {
+    "dense-desktop": {
+      "reference_source_sha256": "c6fb82c7fba6f10da1a9af7849f3e2a8a2009034dde24e7ac138158ba049c641",
+      "start_sha256": "add319c5c1d35fae97c31ca4aa38e3ed5783a7d44201a4e3489da9eb14531095",
+      "final_sha256": "c6fb82c7fba6f10da1a9af7849f3e2a8a2009034dde24e7ac138158ba049c641"
+    },
+    "mobile-language": {
+      "reference_source_sha256": "731c5b66efc5704f5d99fca412d1b5e0f832802cda8b70add3857830bc8ec675",
+      "start_sha256": "36af08c5ba0b8fb62e52a4ea1eeee60af70bf010acecf9057db4bc46389eeeb0",
+      "final_sha256": "731c5b66efc5704f5d99fca412d1b5e0f832802cda8b70add3857830bc8ec675"
+    },
+    "shared-style": {
+      "reference_source_sha256": "794d7c4f1845b631dc861ba24647a5bbdbad21a8acaddec119dcd5a65c2e8568",
+      "start_sha256": "272625a60a111b6cf2c3e7bb15e7f8d211b17195bfdc88916c02cd3a82fd55a0",
+      "final_sha256": "794d7c4f1845b631dc861ba24647a5bbdbad21a8acaddec119dcd5a65c2e8568"
+    }
+  },
+  "image_review": "PENDING: images must be opened separately",
+  "limits": [
+    "Same-author synthetic fixtures and scripted repairs; not a skill-vs-control experiment",
+    "Synthetic safe areas, not native device certification",
+    "No independent model sessions; candidate inputs exclude this runner and reference HTML"
+  ]
+}

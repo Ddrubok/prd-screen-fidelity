@@ -1,0 +1,813 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "1.0"
+      ]
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "parent_digest": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "[0-9a-f]{64}"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "record_kind": {
+      "enum": [
+        "live_run",
+        "historical_import",
+        "benchmark"
+      ]
+    },
+    "project_id": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "project_alias": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 200
+    },
+    "task_type": {
+      "enum": [
+        "implement",
+        "compare",
+        "scoped_redesign",
+        "unknown"
+      ]
+    },
+    "task_summary": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "occurred_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4096
+    },
+    "recorded_at": {
+      "type": "string",
+      "maxLength": 4096
+    },
+    "time_precision": {
+      "enum": [
+        "exact",
+        "date_only",
+        "unknown"
+      ]
+    },
+    "skill": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "enum": [
+            "prd-screen-fidelity"
+          ]
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 4096
+        },
+        "commit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 4096
+        },
+        "instruction_hashes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "maxLength": 4096
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "[0-9a-f]{64}"
+              }
+            },
+            "required": [
+              "path",
+              "sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "activation_evidence": {
+          "enum": [
+            "confirmed_load",
+            "self_reported",
+            "mentioned_only",
+            "unknown"
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "commit",
+        "instruction_hashes",
+        "activation_evidence"
+      ],
+      "additionalProperties": false
+    },
+    "environment": {
+      "type": "object",
+      "properties": {
+        "host": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 4096
+        },
+        "host_version": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 4096
+        },
+        "model": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 4096
+        },
+        "os": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 4096
+        },
+        "browser": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 4096
+        },
+        "device": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 4096
+        }
+      },
+      "required": [
+        "host",
+        "host_version",
+        "model",
+        "os"
+      ],
+      "additionalProperties": false
+    },
+    "lifecycle": {
+      "enum": [
+        "started",
+        "in_progress",
+        "finished",
+        "interrupted",
+        "blocked",
+        "unknown"
+      ]
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "locator": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "content_hash": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "[0-9a-f]{64}"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "source_id",
+          "locator",
+          "content_hash"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "screen_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "screen_id": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "state": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "viewport": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "number",
+                    "minimum": 1
+                  },
+                  "height": {
+                    "type": "number",
+                    "minimum": 1
+                  },
+                  "dpr": {
+                    "type": "number",
+                    "minimum": 0.1
+                  }
+                },
+                "required": [
+                  "width",
+                  "height",
+                  "dpr"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "reference_kind": {
+            "enum": [
+              "supplied",
+              "inferred",
+              "unknown"
+            ]
+          },
+          "reference": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4096
+          },
+          "visual_verification": {
+            "enum": [
+              "compared",
+              "not_verified",
+              "partial"
+            ]
+          },
+          "visual_outcome": {
+            "enum": [
+              "meets_requirements",
+              "authorized_deviations",
+              "needs_correction",
+              "undetermined"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 4096
+            }
+          },
+          "authority_ref": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4096
+          }
+        },
+        "required": [
+          "screen_id",
+          "state",
+          "viewport",
+          "reference_kind",
+          "visual_verification",
+          "visual_outcome",
+          "evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "functional_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "check_id": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "result": {
+            "enum": [
+              "passed",
+              "failed",
+              "not_verified",
+              "not_applicable",
+              "partial"
+            ]
+          },
+          "reason": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4096
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 4096
+            }
+          }
+        },
+        "required": [
+          "check_id",
+          "description",
+          "required",
+          "result",
+          "evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "kind": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "relative_path": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4096
+          },
+          "origin": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4096
+          },
+          "sha256": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "[0-9a-f]{64}"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "availability": {
+            "enum": [
+              "available",
+              "missing",
+              "external_unchecked",
+              "blocked"
+            ]
+          },
+          "supports": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 4096
+            }
+          },
+          "reviewed_by": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4096
+          },
+          "reviewed_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4096
+          },
+          "captured_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4096
+          },
+          "derived_from": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "[0-9a-f]{64}"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "public_export_allowed": {
+            "type": "boolean"
+          },
+          "sensitive_review": {
+            "enum": [
+              "pending",
+              "approved",
+              "rejected"
+            ]
+          }
+        },
+        "required": [
+          "evidence_id",
+          "kind",
+          "sha256",
+          "availability",
+          "supports",
+          "reviewed_by",
+          "reviewed_at"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "finding_id": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "severity": {
+            "enum": [
+              "blocking",
+              "major",
+              "minor",
+              "rendering_noise"
+            ]
+          },
+          "tag": {
+            "enum": [
+              "font_missing",
+              "canvas_scale",
+              "state_mismatch",
+              "layout_drift",
+              "asset_substitution",
+              "behavior_missing",
+              "shared_regression",
+              "evidence_gap",
+              "workflow_overhead",
+              "environment_blocker",
+              "unknown"
+            ]
+          },
+          "observed": {
+            "type": "string",
+            "maxLength": 4096
+          },
+          "cause_hypothesis": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4096
+          },
+          "status": {
+            "enum": [
+              "open",
+              "fixed_verified",
+              "authorized_deviation",
+              "not_verifiable"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 4096
+            }
+          },
+          "authority_ref": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4096
+          },
+          "related_run_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 4096
+            }
+          },
+          "reproduction_ref": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4096
+          },
+          "fix_ref": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4096
+          },
+          "recheck_ref": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4096
+          }
+        },
+        "required": [
+          "finding_id",
+          "severity",
+          "tag",
+          "observed",
+          "cause_hypothesis",
+          "status",
+          "evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "outcomes": {
+      "type": "object",
+      "properties": {
+        "visual_verification": {
+          "enum": [
+            "compared",
+            "not_verified",
+            "partial"
+          ]
+        },
+        "visual_outcome": {
+          "enum": [
+            "meets_requirements",
+            "authorized_deviations",
+            "needs_correction",
+            "undetermined"
+          ]
+        },
+        "functional_outcome": {
+          "enum": [
+            "passed",
+            "failed",
+            "not_verified",
+            "not_applicable",
+            "partial"
+          ]
+        },
+        "delivery_status": {
+          "enum": [
+            "complete",
+            "partial",
+            "blocked",
+            "unknown"
+          ]
+        }
+      },
+      "required": [
+        "visual_verification",
+        "visual_outcome",
+        "functional_outcome",
+        "delivery_status"
+      ],
+      "additionalProperties": false
+    },
+    "collection": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "enum": [
+            "local",
+            "local_with_sync",
+            "manual_import",
+            "benchmark"
+          ]
+        },
+        "record_validation": {
+          "enum": [
+            "valid",
+            "invalid",
+            "pending"
+          ]
+        },
+        "review_state": {
+          "enum": [
+            "received",
+            "needs_information",
+            "ready_for_review",
+            "reviewed",
+            "reproduced",
+            "not_reproduced"
+          ]
+        },
+        "aggregate": {
+          "type": "boolean"
+        },
+        "reported_claim": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 4096
+        }
+      },
+      "required": [
+        "mode",
+        "record_validation",
+        "review_state",
+        "aggregate"
+      ],
+      "additionalProperties": false
+    },
+    "privacy": {
+      "type": "object",
+      "properties": {
+        "visibility": {
+          "enum": [
+            "private",
+            "public_summary"
+          ]
+        },
+        "public_export_allowed": {
+          "type": "boolean"
+        },
+        "sensitive_review": {
+          "enum": [
+            "pending",
+            "approved",
+            "rejected"
+          ]
+        }
+      },
+      "required": [
+        "visibility",
+        "public_export_allowed",
+        "sensitive_review"
+      ],
+      "additionalProperties": false
+    },
+    "content_digest": {
+      "type": "string",
+      "pattern": "[0-9a-f]{64}"
+    },
+    "ended_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4096
+    },
+    "last_edited_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 4096
+    },
+    "change_reason": {
+      "type": "string",
+      "maxLength": 4096
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 4096
+      }
+    },
+    "process_exit_code": {
+      "type": "integer"
+    },
+    "observed_metrics": {
+      "type": "object",
+      "properties": {
+        "duration_seconds": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "tokens": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "cost": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 4096
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "revision",
+    "parent_digest",
+    "record_kind",
+    "project_id",
+    "project_alias",
+    "task_type",
+    "task_summary",
+    "occurred_at",
+    "recorded_at",
+    "time_precision",
+    "skill",
+    "environment",
+    "lifecycle",
+    "source_refs",
+    "screen_checks",
+    "functional_checks",
+    "evidence",
+    "findings",
+    "outcomes",
+    "collection",
+    "privacy"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/prd-screen-fidelity/usage-record.schema.json",
+  "title": "PRD Screen Fidelity usage record 1.0",
+  "description": "Structure only. CLI additionally enforces revision, evidence and outcome relationships. Claims remain attributable assertions, not independently verified truth."
+}

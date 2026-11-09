@@ -1,0 +1,119 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "1.0"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "pattern": "[A-Za-z0-9][A-Za-z0-9._-]{0,79}"
+          },
+          "type": {
+            "enum": [
+              "project_folder",
+              "git_repo",
+              "report",
+              "exported_conversation",
+              "issue_pr",
+              "external_submission"
+            ]
+          },
+          "alias": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4096
+          },
+          "location": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4096
+          },
+          "scope": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 4096
+            }
+          },
+          "owner": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4096
+          },
+          "scan_status": {
+            "enum": [
+              "pending",
+              "checked",
+              "partial",
+              "blocked",
+              "not_configured"
+            ]
+          },
+          "last_scanned_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 4096
+          },
+          "candidate_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "imported_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "duplicate_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "excluded_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "unresolved_count": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "source_id",
+          "type",
+          "alias",
+          "location",
+          "scope",
+          "owner",
+          "scan_status",
+          "last_scanned_at",
+          "candidate_count",
+          "imported_count",
+          "duplicate_count",
+          "excluded_count",
+          "unresolved_count"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Explicitly registered collection sources"
+}

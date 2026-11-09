@@ -1,0 +1,17 @@
+{
+  "baseline_commit": "344a958add4ccadb96200042b7cf55aa9c8ed503",
+  "skill_version": "2026.11.09-history.1",
+  "state": "local uncommitted implementation snapshot; not a historical version attribution",
+  "created_at": "2026-11-09T07:05:40.401386+00:00",
+  "sha256": {
+    "SKILL.md": "96df91ff98838020651fa5f1bac3271fedea9f5b306472e2965330a248451103",
+    "agents/openai.yaml": "b450ac486ca7a0975ebe27ac295a2e0c639bf4c4e2e0612b14d61bbdeb550a3f",
+    "references/contract-and-comparison.md": "124da649c46b8b81a268576bb436417226bfcc336694cbf75dbea5a601e49455",
+    "references/usage-history.md": "c034c4100faf74d5059897003d1de2ec0607c31ea1e7190edd3e8682658362de",
+    "references/evaluation.md": "2e03eba9256af10a8e53392abfbd3ce6d652ab63af09ef084564cc208306c755",
+    "scripts/psf_history.py": "07282d6061ca946ea1d328d58e1e43d44c9da9e5e7c3e115c112bc6fc1782c5f",
+    "schemas/usage-record.schema.json": "c56f6c57affe7251332f85303270bb2bdcb023ed665bde7f2d58a945f920b584",
+    "schemas/source-registry.schema.json": "362933c786f2041db74dc5ac65ac53592a7e2f7ea10fa16c89c729a9c3373a89",
+    "evals/run-visual.mjs": "e258d83a0d45e2afc9deed8e615b1a49823c3cd419a4c58188c8a338a0fb52f6"
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "date": "2026-11-09T07:01:09.786133+00:00",
+  "python": "3.12.10",
+  "os": "Windows",
+  "tests_run": 34,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "items": [
+    {
+      "test": "test_H01_duplicate_import_is_idempotent",
+      "status": "passed"
+    },
+    {
+      "test": "test_H02_conflict_preserves_original",
+      "status": "passed"
+    },
+    {
+      "test": "test_H03_sibling_branches_are_preserved",
+      "status": "passed"
+    },
+    {
+      "test": "test_H04_start_is_not_success",
+      "status": "passed"
+    },
+    {
+      "test": "test_H05_historic_version_unknown",
+      "status": "passed"
+    },
+    {
+      "test": "test_H06_mentions_remain_candidates",
+      "status": "passed"
+    },
+    {
+      "test": "test_H07_success_claim_does_not_verify",
+      "status": "passed"
+    },
+    {
+      "test": "test_H08_compare_writes_only_external_history",
+      "status": "passed"
+    },
+    {
+      "test": "test_H09_required_save_failure_blocks_completion",
+      "status": "passed"
+    },
+    {
+      "test": "test_H10_inferred_is_not_supplied_match",
+      "status": "passed"
+    },
+    {
+      "test": "test_H11_final_edit_requires_new_capture",
+      "status": "passed"
+    },
+    {
+      "test": "test_H12_changed_evidence_hash",
+      "status": "passed"
+    },
+    {
+      "test": "test_H13_missing_and_external_unchecked",
+      "status": "passed"
+    },
+    {
+      "test": "test_H14_invalid_and_future_do_not_stop_batch",
+      "status": "passed"
+    },
+    {
+      "test": "test_H15_archive_traversal_and_symlinks",
+      "status": "passed"
+    },
+    {
+      "test": "test_H16_embedded_commands_are_inert",
+      "status": "passed"
+    },
+    {
+      "test": "test_H17_public_allowlist_and_gate",
+      "status": "passed"
+    },
+    {
+      "test": "test_H18_sync_outage_and_retry",
+      "status": "passed"
+    },
+    {
+      "test": "test_H19_atomic_failure_and_process_termination",
+      "status": "passed"
+    },
+    {
+      "test": "test_H20_unicode_space_path",
+      "status": "passed"
+    },
+    {
+      "test": "test_H21_rebuild_index_is_derived",
+      "status": "passed"
+    },
+    {
+      "test": "test_H22_date_only_not_midnight",
+      "status": "passed"
+    },
+    {
+      "test": "test_H23_redacted_evidence_lineage",
+      "status": "passed"
+    },
+    {
+      "test": "test_H24_compare_can_finish_with_defects",
+      "status": "passed"
+    },
+    {
+      "test": "test_H25_unknowns_and_denominators",
+      "status": "passed"
+    },
+    {
+      "test": "test_H26_off_does_not_log_or_block_command",
+      "status": "passed"
+    },
+    {
+      "test": "test_candidate_reconciliation_uses_exact_interval",
+      "status": "passed"
+    },
+    {
+      "test": "test_complete_update_rechecks_attached_bytes",
+      "status": "passed"
+    },
+    {
+      "test": "test_concurrent_cli_siblings_preserve_both_inputs",
+      "status": "passed"
+    },
+    {
+      "test": "test_dry_run_revision_chain_and_cli_conflict",
+      "status": "passed"
+    },
+    {
+      "test": "test_purge_tracks_local_copies",
+      "status": "passed"
+    },
+    {
+      "test": "test_same_source_interval_new_id_not_new_usage",
+      "status": "passed"
+    },
+    {
+      "test": "test_unknown_external_evidence_is_expressible",
+      "status": "passed"
+    },
+    {
+      "test": "test_wrapper_exit_zero_is_not_acceptance",
+      "status": "passed"
+    }
+  ],
+  "runtime_dependencies": "Python standard library only",
+  "hashes": {
+    "scripts/psf_history.py": "07282d6061ca946ea1d328d58e1e43d44c9da9e5e7c3e115c112bc6fc1782c5f",
+    "schemas/usage-record.schema.json": "c56f6c57affe7251332f85303270bb2bdcb023ed665bde7f2d58a945f920b584",
+    "schemas/source-registry.schema.json": "362933c786f2041db74dc5ac65ac53592a7e2f7ea10fa16c89c729a9c3373a89",
+    "tests/history/test_history.py": "3ecfa3835eabc52c11ff217f2e74312eade4b589f0e223e32a388598432c3eef"
+  },
+  "limits": [
+    "Unix not run",
+    "H13 expired network links remain unchecked; no network probe",
+    "H18 unavailable directory simulation, not a live network disconnect",
+    "H19 injected commit error and forced lock-holder exit, not power-loss durability",
+    "H26 off wrapper executed; missing-tool agent behavior not experimentally tested"
+  ]
+}

@@ -1,0 +1,6 @@
+# Stable checkouts preserve the byte hashes in evaluation manifests.
+* text=auto eol=lf
+*.png binary
+*.pdf binary
+# These tested schema snapshots were recorded with CRLF; retain their exact bytes.
+schemas/*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

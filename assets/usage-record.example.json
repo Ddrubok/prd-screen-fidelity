@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "run_id": "e87154dc-4914-4e82-9e03-c12f8a606830",
+  "revision": 1,
+  "parent_digest": null,
+  "record_kind": "benchmark",
+  "project_id": "synthetic-example",
+  "project_alias": "Synthetic example",
+  "task_type": "compare",
+  "task_summary": "",
+  "occurred_at": null,
+  "recorded_at": "2026-11-09T09:00:00+09:00",
+  "time_precision": "unknown",
+  "skill": {
+    "name": "prd-screen-fidelity",
+    "version": null,
+    "commit": null,
+    "instruction_hashes": [],
+    "activation_evidence": "unknown"
+  },
+  "environment": {
+    "host": null,
+    "host_version": null,
+    "model": null,
+    "os": null
+  },
+  "lifecycle": "unknown",
+  "ended_at": null,
+  "source_refs": [],
+  "screen_checks": [],
+  "functional_checks": [],
+  "evidence": [],
+  "findings": [],
+  "outcomes": {
+    "visual_verification": "not_verified",
+    "visual_outcome": "undetermined",
+    "functional_outcome": "not_verified",
+    "delivery_status": "unknown"
+  },
+  "collection": {
+    "mode": "benchmark",
+    "record_validation": "pending",
+    "review_state": "received",
+    "aggregate": false
+  },
+  "privacy": {
+    "visibility": "private",
+    "public_export_allowed": false,
+    "sensitive_review": "pending"
+  },
+  "change_reason": "Initial record",
+  "notes": [
+    "Synthetic documentation example, never actual usage"
+  ]
+}

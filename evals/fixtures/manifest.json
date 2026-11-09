@@ -1,0 +1,17 @@
+{
+  "sha256": {
+    "dense-desktop/brief.md": "00f31613e94758b145d0ebc68efd2c83fd52ad93e79b908a5426253a8a46eac0",
+    "dense-desktop/reference.pdf": "10114e1982c22d74f628e43504f474fb8395ddc65030ad2c9b91ada4b7372861",
+    "dense-desktop/reference.png": "f6d4e4ef3b798186d97cb42e3c7286724961bbab4ad1b9ca61c5040692e81662",
+    "dense-desktop/start.html": "add319c5c1d35fae97c31ca4aa38e3ed5783a7d44201a4e3489da9eb14531095",
+    "mobile-language/brief.md": "04de4135e08710e0f4fab8d81bf04858e48cf0859310c4d2546bea3f0f3a22c0",
+    "mobile-language/reference.png": "87a6b0a0a5c079834d32a228abfecd162c31f263bb075976d3c2f9752232936f",
+    "mobile-language/start.html": "36af08c5ba0b8fb62e52a4ea1eeee60af70bf010acecf9057db4bc46389eeeb0",
+    "shared-style/brief.md": "acfb9efe052b0759f0cb33a24659bb3f2c6a0e2c01c47f2a20c13aa9754a7117",
+    "shared-style/notifications.html": "3e3e156e869fd9978e572ecf5589d765672f5f354bcc9cff16cc010b840713a9",
+    "shared-style/notifications.png": "41fe258f595a5621586780ac618e3404fdb4ad77e2f3e2f927fb14aa2f447ffb",
+    "shared-style/reference.png": "65f5996cb77e8ba74d4413991d0a9fd74ff31a102a61653fa020570b39a6d238",
+    "shared-style/start.html": "272625a60a111b6cf2c3e7bb15e7f8d211b17195bfdc88916c02cd3a82fd55a0"
+  },
+  "purpose": "Frozen candidate inputs; no reference HTML or evaluator source included"
+}

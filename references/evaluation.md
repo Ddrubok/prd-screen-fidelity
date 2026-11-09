@@ -39,4 +39,14 @@ The earlier Flutter Web dummy demo is a separate same-author historical demonstr
 
 ## Recorded runs
 
-[2026-10-20 maintainer fixture](../evals/2026-10-20/RESULTS.md): V01, V08 and V12 executed with Chromium and actual image inspection. Includes input/start/final files, captures, hashes and an optional runner. These are same-author fixture results, not independent skill effectiveness evidence. V02–V07, V09–V11 and V13–V18 remain NOT RUN.
+[2026-10-20 maintainer fixture](../evals/2026-10-20/RESULTS.md): V01, V08 and V12 executed with Chromium and actual image inspection. Historical files are unchanged.
+
+[2026-11-09 development results](../evals/runs/2026-11-09-history/RESULTS.md): history acceptance checks, three new image fixtures, actual V04/V15/V16/V18/V10 operations and the expanded legacy geometry/persistence checks. V02, V03, V05–V07, V09, V11, V13, V14 and V17 remain NOT RUN as dedicated behavioral cases. The new fixtures are scripted maintainer repairs, not model-session effectiveness trials.
+
+## Candidate isolation and a future controlled comparison
+
+Frozen input hashes are in [the fixture manifest](../evals/fixtures/manifest.json). Copy only one `evals/fixtures/<case>` folder to a fresh workspace. The dense desktop case supplies PNG/PDF; mobile supplies 1170-pixel raster with logical dimensions in the brief; shared-style supplies two reference images and two starting routes. Never expose `evals/run-visual.mjs`, run outputs, reference-source generation, solutions or prior trials to candidates. Give only images, brief, starting files and required assets. Runtime host permissions must enforce this boundary; a path convention alone is not isolation.
+
+For the proposed exploratory study, use no skill versus this exact skill snapshot, three independent repetitions per case (18 fresh sessions total). Keep model, tools, budgets, starting bytes, assets and input order balanced; record actual model identity, hashes, timing/tokens when observed, failures and unsupported completion claims. Have reviewers judge region order, clipping/wrapping, behavior, deviations and scope using fixed criteria, blinded to arm when practical. Do not infer superiority from the maintainer's own successful repairs. Existing-versus-new skill requires a separate third arm.
+
+This project's solo-agent preference remains in effect. No independent sessions were launched, and no speed/token comparison is claimed. V13 overhead is NOT RUN. Host adapters remain deferred until an actual host workflow needs one and can be verified.

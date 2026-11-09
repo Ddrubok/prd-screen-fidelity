@@ -7,6 +7,8 @@ description: >-
   디자인 시안과 동일한 UI, 시안 대조/비교, screenshot-to-UI,
   or visual fidelity reviews. Not intended for text-only PRDs without
   visual references or unconstrained redesign requests.
+metadata:
+  version: "2026.11.09-history.1"
 ---
 
 # PRD Screen Fidelity
@@ -57,7 +59,7 @@ Start with missing/wrong regions, order, viewport and sizing, then typography/wr
 
 After the final code edit, re-render the changed screens; otherwise mark post-edit verification pending. Shared font, button, spacing or layout changes require proportionate rechecks of representative consumers and affected states, not a full-app audit every time. Report actual coverage. Do not stop at compilation, DOM structure, or a verbal assertion that the page looks similar.
 
-Keep fixes within the user's authorized scope. Implementation requests authorize implementation and proportionate checks; comparison-only requests authorize inspection and reports, not app changes. External publication, purchases, messages and production data changes need task authorization.
+External publication, purchases, messages and production data changes need task authorization.
 
 For implementation, claim completion only when required visual and functional checks support it and no material unresolved difference remains except deviations authorized by actual user instructions or project criteria. Merely explaining a difference does not resolve or approve it. Comparison-only work can finish with a report of failures; that does not certify the app. If blocked, report partial completion and remaining checks. Do not spend unlimited iterations chasing font antialiasing noise. No arbitrary similarity percentage proves acceptance.
 
@@ -70,3 +72,7 @@ Distinguish visual verification (compared / not verified), visual outcome (meets
 If no runtime or visual tool is available, report code changes and visual verification pending; never claim the screen matches from code alone. If source imagery was never inspected, say so explicitly.
 
 Read [evaluation cases](references/evaluation.md) only when modifying or evaluating this skill itself. Do not load them for ordinary app screen implementation or comparison.
+
+## Optional private usage history
+
+If history was explicitly configured, check only `config.json` at `--history-root`, `PSF_HISTORY_HOME`, or `~/prd-screen-fidelity-history` (in that order). Missing configuration, mode `off`, or an unavailable Python tool never blocks screen work. Do not initialize collection silently or read the full history into context. When enabled, follow [usage history](references/usage-history.md) to record a minimal start, meaningful updates and an explicit end outside the app and installed skill. Preserve unknown versions, activation and outcomes; a process exit or a valid record is not task acceptance. Report logging/sync failures separately, retain local evidence and retry the logger only, never a product save/payment action. Read the schema only when constructing a record or investigating validation. No automatic publication, host-private database scanning or skill rewriting.

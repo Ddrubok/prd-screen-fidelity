@@ -1,0 +1,43 @@
+{
+  "reviewed_at": "2026-11-09T07:05:40.377672+00:00",
+  "reviewer": "Codex primary session (model version not independently recorded)",
+  "method": "Local image-view tool; source/final pairs opened. Byte-identical final captures retain earlier image-review evidence.",
+  "images": {
+    "dense-desktop-final.png": "f6d4e4ef3b798186d97cb42e3c7286724961bbab4ad1b9ca61c5040692e81662",
+    "mobile-language-final.png": "87a6b0a0a5c079834d32a228abfecd162c31f263bb075976d3c2f9752232936f",
+    "mobile-large-text.png": "7dd3225b2b66e714cd0557da6d7cc994ec8ae8830a9f1715254adf468efa9341",
+    "mobile-large-bottom.png": "9cc1a9a2f03eda8fb4673022390bd5afcfbe22f319d402bef873e564fff9889a",
+    "mobile-canvas.png": "15c652903b9b1c7e434a56e04603042235c60925f35b0008b6d587eab33fe5d4",
+    "shared-style-final.png": "65f5996cb77e8ba74d4413991d0a9fd74ff31a102a61653fa020570b39a6d238",
+    "notifications-final.png": "41fe258f595a5621586780ac618e3404fdb4ad77e2f3e2f927fb14aa2f447ffb",
+    "legacy-reference.png": "4ce1197d56f1f1245bd1ee7575158839bc938a681e68744513dfda5535eb49e2",
+    "legacy-app.png": "4ce1197d56f1f1245bd1ee7575158839bc938a681e68744513dfda5535eb49e2",
+    "pdf-page-1.png": "9972a69215aaa3517d6952fc28e971421106ff115be8e08844d98a7a1ed5a324"
+  },
+  "equivalent_previously_opened": {
+    "dense-desktop-final.png": "Byte-identical to opened 2026-11-09-visual/dense-desktop-final.png",
+    "shared-style-final.png": "Byte-identical to opened 2026-11-09-visual/shared-style-final.png",
+    "notifications-final.png": "Byte-identical to opened 2026-11-09-visual/notifications-final.png",
+    "mobile-language-final.png": "Byte-identical to opened 2026-11-09-visual-02/mobile-language-final.png",
+    "legacy-reference.png": "Byte-identical to opened 2026-11-09-visual-02/legacy-reference.png",
+    "legacy-app.png": "Byte-identical to opened 2026-11-09-visual-02/legacy-app.png"
+  },
+  "V15": {
+    "status": "rasterized_and_viewed",
+    "input": "../../fixtures/dense-desktop/reference.pdf",
+    "renderer": "pypdfium2 5.15.1",
+    "dpi": 96,
+    "page": 1,
+    "image": "pdf-page-1.png",
+    "result": "Header, left rail, table and controls visible; PDF text antialiasing differs from browser"
+  },
+  "V04": "390 logical width vs 1170 raster confirmed; same default-state source/final viewed",
+  "V16": "Synthetic measured regions and state-matched crop viewed; no physical-device claim",
+  "V18": "Profile and notifications source/final viewed; shared changes covered",
+  "V10": "Earlier full-page image revealed inset occlusion despite mechanical pass; final scroll container and scrolled capture show the complete save label above the bottom inset. Top heading partly outside the scroll viewport is expected in this scrolled state.",
+  "limits": [
+    "Same author and scripted fixes, no blinded or independent effectiveness judgment",
+    "Full-page/scroll captures cover only recorded states",
+    "No similarity percentage or universal system-bar sizes"
+  ]
+}
